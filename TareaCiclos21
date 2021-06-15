@@ -1,0 +1,82 @@
+'''
+
+En una tienda de descuento las personas que van a pagar el importe de su compra llegan a la caja y sacan una bolita de color, 
+
+que les dirá que descuento tendrán sobre el total de su compra. Determinar la cantidad que pagara cada cliente desde que la tienda
+
+abre hasta que cierra. Se sabe que si el color de la bolita es rojo el cliente obtendrá un 40% de descuento; si es amarillo un 25% y
+ 
+si es blanco no obtendrá descuento.
+'''
+
+descuento = 'vacio'
+print('*************')
+print('Bienvenido!')
+print('*************\n')
+
+pregunta = input('Desea ingresar un cliente?[si/no] ')
+
+while pregunta != 'si' and pregunta != 'no' :
+
+    print('\n...<Oops! Porfavor, ingrese un caracter valido>...\n')
+
+    pregunta = input('Desea ingresar un cliente?[si/no] ')
+
+while pregunta == 'si' :
+
+    compra = int(input('Ingrese el total de su compra : $'))
+
+    while compra < 0 :
+
+        print('...<\nOops! porfavor, ingrese un numero positivo>...\n')
+
+        compra = int(input('Ingrese el total de su compra : $'))
+
+    print('Ingrese el color de la bolita que saco\n')
+
+    color = input('rojo = r\namarillo = a \nblanco = b\nIngrese-> ')
+
+    while descuento == 'vacio':
+
+        if color == 'r' :
+
+            descuento = compra * 0.40
+
+        elif color == 'a' :
+
+            descuento = compra * 0.25
+
+        elif color == 'b' :
+
+            descuento = 0
+
+        else :
+
+            print('\n...<Oops! Porfavor, ingrese un caracter valido>...\n')
+
+            color = input('rojo = r\namarillo = a \nblanco = b\nIngrese-> ')
+
+    compra = compra - descuento
+
+    if descuento > 0 :
+
+        print('\nWow! usted ahorra $', round(descuento),)
+
+    else :
+        print('\nDesafortunadamente usted no tiene descuento :(')
+
+    print('El total a pagar es de $',round(compra) ) 
+
+    descuento = 'vacio'
+
+    pregunta = input('\nDesea ingresar un cliente?[si/no] ')
+
+    while pregunta != 'si' and pregunta != 'no' :
+
+        print('\n...<Oops! Porfavor, ingrese un caracter valido>...\n')
+
+        pregunta = input('\nDesea ingresar un cliente?[si/no] ')
+
+print('\n************************************************************')
+print('...Gracias por utilizar nuestro programa! hasta luego... :)')
+print('************************************************************')

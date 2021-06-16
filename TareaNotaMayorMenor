@@ -1,0 +1,43 @@
+notas = 10
+
+x = 1
+
+menor = 0
+
+mayor =  0
+
+print('...Bienvenido!...\n')
+
+while x <= notas :
+
+    nota = float(input('Ingrese su nota [' + str(x) + ' de 10]  : '))
+
+    if nota < 1 or nota > 7 :
+
+        print('...<Oops! Ingrese valores entre 1 y 7 porfavor>...')
+
+    else :
+
+        if x > 1 :
+
+            if nota >= mayor :
+
+                mayor = nota
+
+            
+            if nota <= menor :
+
+                    menor = nota 
+ 
+        else :
+            mayor = nota
+
+            menor = nota 
+
+        x += 1
+
+print('\nSu mejor nota fue un: ', mayor)
+
+print('Su peor nota fue un: ', menor)
+
+print('\n...Gracias por usar nuestro programa! hasta pronto!...')

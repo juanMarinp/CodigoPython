@@ -1,0 +1,76 @@
+total_dia = 0
+
+total_cliente = 0
+
+print('\n****************************************************')
+print('\nBienvenido/a!')
+print('\n****************************************************')
+
+pregunta = input('Desea ingresar un cliente?[si/no] : ')
+
+while pregunta != 'si' and pregunta != 'no' :
+
+    print('...<Porfavor,seleccione una de las dos opciones>...')
+
+    pregunta = input('Desea ingresar un cliente?[si/no] : ')
+
+while pregunta == 'si' :
+
+    precio = int(input('Ingrese el precio del producto : $'))
+
+    while precio < 0 :
+
+        print('...<Porfavor, ingrese valores positivos>...')
+
+        precio = int(input('Ingrese el precio del producto : $'))
+
+    total_cliente += precio
+
+    pregunta2 = input('Desea ingresar otro producto?[si/no] : ')
+
+    while pregunta2 != 'si' and pregunta2 != 'no' :
+
+        print('...<Porfavor,seleccione una de las dos opciones>...')
+
+        pregunta2 = input('Desea ingresar otro producto?[si/no] : ')
+
+    while pregunta2 =='si' :
+
+        precio = int(input('Ingrese el precio del producto : $'))
+
+        
+        while precio < 0 :
+
+            print('...<Porfavor, ingrese valores positivos>...')
+
+            precio = int(input('Ingrese el precio del producto : $'))
+
+        total_cliente += precio
+
+        pregunta2 = input('Desea ingresar otro producto?[si/no] : ')
+
+        while pregunta2 != 'si' and pregunta2 != 'no' :
+
+            print('...<Porfavor,seleccione una de las dos opciones>...')
+
+            pregunta2 = input('Desea ingresar otro producto?[si/no] : ')
+
+
+    print('\nTotal a pagar : $', total_cliente)
+
+    total_dia += total_cliente
+
+    total_cliente = 0
+
+    pregunta = input('\nDesea ingresar un cliente?[si/no] : ')
+
+    while pregunta != 'si' and pregunta != 'no' :
+
+        print('...<Porfavor,seleccione una de las dos opciones>...')
+
+        pregunta = input('Desea ingresar un cliente?[si/no] : ')
+
+
+print('\n****************************************************')
+print('\nEl total recaudado en el dia fue de : $', total_dia)
+print('\n****************************************************')

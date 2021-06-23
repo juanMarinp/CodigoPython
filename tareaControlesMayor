@@ -1,0 +1,66 @@
+alumnos = 0
+
+unidades = 5
+
+num_control = 'nada'
+
+x = 1
+
+z = 1
+
+suma_nota = 0
+
+prom_mayor = 0
+
+control_mayor = 0
+
+alumnos = int(input('Ingrese la cantidad de alumnos : '))
+
+while alumnos < 0 :
+
+    print('...<Porfavor, ingrese un valor positivo>...')
+
+    alumnos = int(input('Ingrese la cantidad de alumnos : '))
+
+while x <= alumnos :
+
+    num_control = int(input('Ingrese el numero de control del alumno '+str(x)+' : '))
+
+    while num_control < 0 :
+
+        print('...<Porfavor, ingrese un valor positivo>...')
+
+        num_control = int(input('Ingrese el numero de control del alumno '+str(x)+' : '))
+
+    while z <= unidades :
+
+        nota = round(float(input('Ingrese la nota de la unidad '+str(z)+' del alumno numero '+str(x)+' : ')),1)
+
+        while nota < 1 or nota > 7 :
+
+            print('...<Porfavor, Ingrese valores entre 1 y 7>...')
+
+            nota = round(float(input('Ingrese la nota de la unidad '+str(z)+' del alumno numero '+str(x)+' : ')),1)
+
+
+        suma_nota += nota
+
+        z += 1
+
+    prom_nota = suma_nota / unidades
+
+    if prom_nota >= prom_mayor :
+
+        prom_mayor = prom_nota 
+
+        control_mayor = num_control
+
+    x += 1
+
+    suma_nota = 0
+
+    z = 1
+
+print('\nNumero de control del alumno con mayor promedio : ', control_mayor)
+
+print('\nSu promedio fue de : ', prom_mayor)

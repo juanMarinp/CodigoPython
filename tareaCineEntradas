@@ -1,0 +1,109 @@
+categoria1 = 0
+
+categoria2 = 0
+
+categoria3 = 0
+
+categoria4 = 0
+
+categoria5 = 0
+
+total_perdido = 0
+
+valor = int(input("Ingrese valor de la entrada : $"))
+
+while valor < 0 or valor > 10000 :
+
+    print('...<Ingrese valores entre $0 y $10.000>...')
+        
+    valor = int(input("Ingrese valor de la entrada : $"))
+
+pregunta = input("Desea ingresar un cliente?[si/no] : ")
+
+while pregunta != "si" and pregunta != "no" :
+
+    print('...<Porfavor, eliga una de las dos opciones>...')
+
+    
+    pregunta = input("Desea ingresar un cliente?[si/no] : ")
+
+
+while pregunta == "si" :
+
+    edad = int(input("Ingrese la edad del cliente : "))
+
+    while edad < 5 or edad > 120 :
+
+        print('...<Porfavor, ingrese edad valida>...\n...<niños menores a 5 años no pueden ingresar>...')
+
+        edad = int(input("Ingrese la edad del cliente : "))
+
+    if edad <= 14 :
+
+        descuento = valor * 0.35
+
+        categoria1 += descuento
+
+    elif edad >= 15 and edad <= 19 :
+
+        descuento = valor * 0.25
+
+        categoria2 += descuento
+
+    elif edad >= 20 and edad <= 45 :
+
+        descuento = valor * 0.1
+
+        categoria3 += descuento
+
+    elif edad >= 46 and edad <= 65 :
+
+        descuento = valor * 0.25
+
+        categoria4 += descuento
+
+    else :
+        
+        descuento = valor * 0.35
+
+        categoria5 += descuento
+
+    total = valor - descuento
+
+    print('************************************')
+    print('El descuento fue de : $', descuento)
+
+    print('\nEl total a pagar es de : $',total)
+    print('************************************')
+
+    total_perdido += descuento
+
+    pregunta = input("Desea ingresar un cliente?[si/no] : ")
+
+    while pregunta != "si" and pregunta != "no" :
+
+        print('...<Porfavor, eliga una de las dos opciones>...')
+
+    
+        pregunta = input("Desea ingresar un cliente?[si/no] : ")
+
+if total_perdido != 0 :
+
+    print('\n********************************************************************')
+    print('El total de perdidas en descuento del dia fue de : $',round(total_perdido))
+
+    print('\nEl total de perdidas en la categoria 1 fue de : $',round(categoria1))
+
+    print('\nEl total de perdidas en la categoria 2 fue de : $',round(categoria2))
+
+    print('\nEl total de perdidas en la categoria 3 fue de : $',round(categoria3))
+
+    print('\nEl total de perdidas en la categoria 4 fue de : $',round(categoria4))
+
+    print('\nEl total de perdidas en la categoria 5 fue de : $',round(categoria5))
+
+    print('\n********************************************************************')
+
+print('\n**************************************')
+print('...<Programa finalizado, hasta pronto!>...')
+print('**************************************')

@@ -1,0 +1,100 @@
+amarilla = 0
+rosa = 0
+roja = 0
+verde = 0
+azul = 0
+total = 0
+
+pregunta = input('Desea ingresar un auto?[si/no] : ')
+
+while pregunta != 'si' and pregunta != 'no' :
+
+    print('...<Seleccione una de las dos opciones>...')
+
+    pregunta = input('Desea ingresar un auto?[si/no] : ')
+
+while pregunta == 'si' :
+
+    digito = int(input('Ingrese el ultimo digito de la placa : '))
+
+    while digito < 0 or digito > 9 :
+
+        print('...<Error, ingrese valores entre 0 y 9>...')
+
+        digito = int(input('Ingrese el ultimo digito de la placa : '))
+
+    if digito == 1 or digito == 2 :
+
+        amarilla += 1
+
+    elif digito == 3 or digito == 4 :
+
+        rosa += 1
+
+
+    elif digito == 5 or digito == 6 :
+
+        roja += 1
+
+    
+    elif digito == 7 or digito == 8 :
+
+        verde += 1
+
+    
+    else :
+
+        azul += 1
+
+    total += 1
+
+    pregunta = input('Desea ingresar un auto?[si/no] : ')
+
+    while pregunta != 'si' and pregunta != 'no' :
+
+        print('...<Seleccione una de las dos opciones>...')
+
+        pregunta = input('Desea ingresar un auto?[si/no] : ')
+
+if amarilla == 0 :
+
+    amarilla = "ninguno"
+
+if rosa == 0 :
+
+    rosa = "ninguno"
+
+if roja == 0 :
+
+    roja = "ninguno"
+
+if verde == 0 :
+
+    verde = "ninguno"
+
+if azul == 0 :
+
+    azul = "ninguno"
+
+if total != 0:
+
+    print('\n********************************************************')
+    print('Total de autos con calcomania amarilla : ', amarilla)
+
+    print('\nTotal de autos con calcomania rosa : ', rosa)
+
+    print('\nTotal de autos con calcomania roja : ', roja)
+
+    print('\nTotal de autos con calcomania verde : ', verde)
+
+    print('\nTotal de autos con calcomania azul : ', azul)
+
+    print('\nTotal de vehiculos ingresados : ',total)
+
+    print('********************************************************')
+
+else :
+
+    print('\n...<No se registro ningun vehiculo>...')
+
+print('\n...FIN DEL PROGRAMA...')

@@ -1,0 +1,30 @@
+menor = 0
+
+x = int(input("Ingrese la cantidad de numeros que desea ingresar : "))
+
+while x < 1 :
+
+    print("Ingrese numeros positivos")
+
+    
+    x = int(input("Ingrese la cantidad de numeros que desea ingresar : "))
+
+cont = 1
+
+while cont <= x :
+
+    numero = int(input("Ingrese su numero ["+str(cont)+" de "+str(x)+"] : "))
+
+    if cont == 1 :
+
+        menor = numero
+
+    else :
+
+        if numero < menor :
+
+            menor = numero
+
+    cont += 1
+
+print("El numero menor ingresado es : ", menor)         

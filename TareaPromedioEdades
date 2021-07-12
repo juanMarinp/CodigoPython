@@ -1,0 +1,71 @@
+hombres = 0
+
+mujeres = 0
+
+total = 0
+
+edadHombres = 0
+
+edadMujeres = 0
+
+totalEdad = 0
+
+x = 1
+
+while x <= 10 :
+
+    pregunta = input("Ingrese sexo del alumno[m/f] : " )
+
+    while pregunta != "m" and pregunta != "f" :
+
+        print("Ingrese una de las dos opciones")
+
+        pregunta = input("Ingrese sexo del alumno[m/f] : " )
+
+    if pregunta == "m" :
+
+        hombres += 1
+
+        edad = int(input("Ingrese la edad : "))
+
+        while edad < 1 or edad > 100 :
+
+            print("ingrese valores entre 1 y 100")
+
+            edad = int(input("Ingrese la edad : "))
+
+        edadHombres += edad
+
+        totalEdad += edad    
+
+    else :
+
+        mujeres += 1
+        
+        edad = int(input("Ingrese la edad : "))
+
+        while edad < 1 or edad > 100 :
+
+            print("ingrese valores entre 1 y 100")
+
+            edad = int(input("Ingrese la edad : "))
+
+        edadMujeres += edad
+
+        totalEdad += edad
+
+    total += 1
+
+    x += 1
+
+promedioHombres = edadHombres / hombres 
+
+promedioMujeres = edadMujeres / mujeres
+
+promedioGeneral = totalEdad / total
+
+print("El promedio de edad de los alumnos hombres es de : ", promedioHombres)
+
+print("El promedio de edad de las alumnas mujeres es de : ", promedioMujeres)
+
+print("El promedio general de todo el curso es de : ", promedioGeneral)

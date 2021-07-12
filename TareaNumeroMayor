@@ -1,0 +1,30 @@
+mayor = 0
+
+x = int(input("Ingrese la cantidad de numeros que desea ingresar : "))
+
+while x < 1 :
+
+    print("Ingrese numeros positivos")
+
+    
+    x = int(input("Ingrese la cantidad de numeros que desea ingresar : "))
+
+cont = 1
+
+while cont <= x :
+
+    numero = int(input("Ingrese su numero ["+str(cont)+" de "+str(x)+"] : "))
+
+    if cont == 1 :
+
+        mayor = numero
+
+    else :
+
+        if numero > mayor :
+
+            mayor = numero
+
+    cont += 1
+
+print("El mayor numero ingresado es : ", mayor)         

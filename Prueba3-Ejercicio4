@@ -1,0 +1,60 @@
+print('...Hola! este programa sabra si tus numeros son amigos o no!...')
+
+print('\n...Dos numeros son amigos si la suma de sus divisores es igual al otro numero...\n')
+
+suma1 = 0
+
+suma2 = 0
+
+i = 1
+
+x = 1
+
+numero = int(input('Ingrese su primer numero : '))
+
+while numero < 0 :
+
+    print('\n...Ingrese valores positivos...\n')
+
+    
+    numero = int(input('Ingrese su primer numero : '))
+
+numero2 = int(input('Ingrese su segundo numero : '))
+
+while numero2 < 0 :
+
+    print('\n...Ingrese valores positivos...\n')
+    
+    numero2 = int(input('Ingrese su segundo numero : '))
+
+while i != numero and x != numero2 :
+
+    if numero % i == 0 :
+
+        suma1 += i
+
+    i += 1
+
+    if numero2 % x == 0 :
+
+        suma2 += x
+
+    x += 1
+
+print('\nLa suma de todos los divisores de ', numero, 'es : ',suma1)
+
+print('\nLa suma de todos los divisores de ', numero2, 'es : ',suma2)
+
+if suma1 == numero2 and suma2 == numero :
+
+    print('\n...Hey! el numero ',numero,' y el numero ', numero2, ' son amigos!...')
+
+elif numero == numero2 :
+
+    print('\n...Usted ingreso dos numeros iguales, no son amigos, son gemelos!...')
+
+else :
+
+    print('\n...Oh no! el numero ',numero,' y el numero ', numero2, 'no son amigos! :( ...')
+
+print('\n...Fin del programa...')

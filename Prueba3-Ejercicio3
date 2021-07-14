@@ -1,0 +1,54 @@
+'''
+
+3.	Desarrolle un programa que permita ingresar n números y al finalizar desplegar cuantos fueron primos.
+
+'''
+
+print('...Hola! Este programa te indica cuantos numeros ingresados son primos!...')
+
+x = 1
+
+i = 2
+
+primos = 0
+
+bucle = int(input('Cuantos numeros desea ingresar? : '))
+
+while bucle < 0 :
+
+    print('...Ingrese un valor positivo...')
+
+    
+    bucle = int(input('Cuantos numeros desea ingresar? : '))
+
+while x <= bucle :
+
+    numero = int(input("Ingrese el numero ["+str(x)+ " de "+str(bucle)+"] : "))
+
+    if numero == 0 or numero == 1 or numero < 0:
+
+        x += 1
+
+    else :
+        
+        while numero % i != 0:
+
+            i += 1
+
+        if i == numero:
+
+            primos += 1
+
+        x += 1
+
+        i = 2
+
+if primos != 0 :
+
+    print('\nEl total de numeros primos ingresados fueron de : ', primos)
+
+else :
+
+    print('\n...No se ingreso ningun numero primo...')
+
+print('\n...Fin del programa...')

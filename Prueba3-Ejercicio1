@@ -1,0 +1,38 @@
+'''
+
+1.	Desarrolle un programa que permita al usuario ingresar 10 números y al 
+finalizar despliegue el promedio solo de los números impares positivos, no 
+debe validar los números, el usuario puede ingresar el que quiera, por lo tanto, 
+no debemos obligarlo a ingresar uno impar y positivo.
+'''
+
+x = 1
+
+total = 0
+
+suma = 0
+
+while x <= 10 :
+
+    numero = int(input("Ingrese el numero ["+str(x)+ " de 10] : "))
+
+    if numero % 2 != 0 and numero > 0 :
+
+        suma += numero
+
+        total += 1
+
+    x += 1
+
+if total != 0 :
+
+
+    promedio = suma / total 
+
+    print('\nEl promedio de todos los numeros impares positivos ingresados es de : ', round(promedio))
+
+else :
+
+    print('\n...No se ingreso ningun numero impar positivo...')
+
+print('\n...Fin del programa...')

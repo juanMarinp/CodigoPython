@@ -1,0 +1,63 @@
+'''
+2.	Desarrolle un programa que permita al usuario ingresar 10 números y al 
+finalizar desplegar por pantalla cuantos fueron mayores y cuantos menores al 
+primer número ingresado, si ingresa un cero en el primero número debemos validar, 
+enviar un mensaje de error y pedir que reintente)
+
+'''
+
+
+print('...Hola! En este programa podras saber que numero son mayores, menores o iguales al primer numero que ingresaste!\n')
+
+print('...recuerda, el primer numero no puede ser cero...\n')
+
+x = 1
+
+primerNumero = 0
+
+mayor = 0
+
+menor = 0
+
+igual = 0
+
+while x <= 10 :
+
+    numero = int(input("Ingrese el numero ["+str(x)+ " de 10] : "))
+
+    if x == 1 :
+
+        while numero == 0 :
+
+            print('...Ingrese un numero distinto a cero...')
+
+            
+            numero = int(input("Ingrese el numero ["+str(x)+ " de 10] : "))
+
+        primerNumero = numero
+
+    else :
+
+        if numero > primerNumero :
+
+            mayor += 1
+
+        elif numero < primerNumero :
+
+            menor += 1
+
+        else :
+
+            igual += 1
+
+    x += 1
+
+print('\nLos numeros mayores al primer numero ingresado fueron : ', mayor)
+
+
+print('\nLos numeros menores al primer numero ingresado fueron : ', menor)
+
+
+print('\nLos numeros iguales al primer numero ingresado fueron : ', igual)
+
+print('\n...Fin del programa...')
